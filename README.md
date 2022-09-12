@@ -14,7 +14,7 @@ vim 配置文件
 
 - `scrooloose/syntastic`
 语法检测
-- `valloric/youcompleteme`
+- `ycm-core/YouCompleteMe`
 语法补充
 - `altercation/vim-colors-solarized`
 编辑器配色
@@ -24,6 +24,10 @@ vim 配置文件
 状态栏
 - `vim-airline/vim-airline-themes`
 状态栏主题
+- `godlygeek/tabular`
+代码对齐
+- `ctrlpvim/ctrlp.vim`
+快速检索文件并打开
 - `tpope/vim-surround`
 成对标签
 - `tpope/vim-repeat`
@@ -34,7 +38,6 @@ git包装
 对齐插件
 - `tpope/vim-sensible`
 默认配置值
-(emmmmm, 之前配过一个详细的丢了, 暂时用这个顶一下, 但是用着用着觉得挺好用的..
 
 ### 功能
 
@@ -48,5 +51,9 @@ git包装
 
 ### 快捷键
 
- 1. `ctrl + w` 在各窗口之前切换
- 2. `ctrl + n` 切换 `nerdtree` 的开关
+0. `ctrl + w` 在各窗口之前切换
+0. `ctrl + n` 切换 `nerdtree` 的开关
+0. `ctrl + p` 索引当前目录文件,并可搜索打开文件
+0. `\a=` 以`=`为中心对齐
+0. `\a:` 以`:`为中心对齐
+0. `\c ` 切换注释

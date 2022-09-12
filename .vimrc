@@ -6,7 +6,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Language
 Plugin 'scrooloose/syntastic'
 " Completion
-Plugin 'valloric/youcompleteme'
+Plugin 'ycm-core/YouCompleteMe'
 " Code display
 Plugin 'altercation/vim-colors-solarized'
 " integrations
@@ -15,11 +15,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'godlygeek/tabular'
+Plugin 'ctrlpvim/ctrlp.vim'
 " Commands
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 " Other
 Plugin 'tpope/vim-fugitive'
+Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-sensible'
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -49,19 +51,21 @@ set tabstop=2
 set softtabstop=2
 set shiftround
 " Search
+set hlsearch
 set gdefault
 set smartcase
 set incsearch
 set showmatch
-nnoremap <silent> <cr> :nohlsearch<cr><cr>
 " Plugin
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
+let g:ctrlp_custom_ignore = {
+      \ 'dir': '\v[\/](node_modules|\.(git|svn))$',
+      \}
 " Keymap
-map <C-n> :NERDTreeToggle<CR>
-if exists(":Tabularize")
-  nmap <leader>a= :Tabularize /=<cr>
-  vmap <leader>a= :Tabularize /=<cr>
-  nmap <leader>a: :Tabularize /:\zs<cr>
-  vmap <leader>a: :Tabularize /:\zs<cr>
-endif
+nnoremap <silent> <cr> :nohlsearch<cr><cr>
+map <c-n> :NERDTreeToggle<cr>
+nmap <leader>a= :Tabularize /=<cr>
+vmap <leader>a= :Tabularize /=<cr>
+nmap <leader>a: :Tabularize /:\zs<cr>
+vmap <leader>a: :Tabularize /:\zs<cr>
