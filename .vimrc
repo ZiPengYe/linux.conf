@@ -23,6 +23,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-sensible'
+Plugin 'github/copilot.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on
@@ -36,6 +37,8 @@ set wildmenu
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 set showcmd
+set nrformats=
+set history=200
 " Color
 set t_Co=256
 let g:solarized_termcolors=256
